@@ -1,0 +1,408 @@
+
+
+/*
+
+BOX
+Largura
+Conteudo da caixa
+
+*/
+
+
+/*
+CSS
+
+Cascading Stylesheet
+
+Espaçamentoss
+Bordas
+Preenchimento
+
+Posicionamentos
+
+
+*/
+
+/*Globais*/
+body {
+
+background: #e5e5e5;
+color: #25282b;
+
+margin: 0;
+
+font-family: 'Montserrat', sans-serif;
+
+    }
+
+body.hideScroll {
+    overflow: hidden;
+}
+
+
+
+
+    a {
+        color: #ff5E84;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    p, .description {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+
+    }
+
+    .button {
+    color: white;
+    
+    background: #ff5e84;
+
+    
+    
+    width: 150px;
+    height: 40px;
+    
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    box-shadow: 0px 8px 16px #ff5E8432;
+    
+    }
+
+    .button:hover {
+        background-color: #0984e3;
+        text-decoration: none;
+    }
+
+    
+    
+    
+    /*Padrão*/
+    
+
+#container{
+    width: 90;
+    max-width: 980px;
+
+    margin: 40px auto;
+
+    display: flex;
+}
+
+#intro {
+    width: 300px;
+
+    margin-right: 64px;
+}
+
+main {
+    margin: 32px 0;
+   
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 32px;
+
+
+}
+
+
+
+    button{
+color: #ff5e84;
+
+border:none;
+
+font-weight: bold;
+
+background: none;
+
+cursor: pointer;
+
+outline: none;
+
+font-size: 14px;
+font-weight: bold;
+line-height: 18px;
+letter-spacing: 0.2px;
+
+
+}
+
+button:hover {
+    text-decoration: underline;
+}
+ 
+
+
+
+  
+#buttons, footer {
+    text-align: center;
+
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0.2px;
+
+color: #777;
+}
+
+footer a {
+    opacity: 0.7;
+}
+
+
+.idea {
+    display: flex;
+    
+    
+    background-color: #FFF;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+    border-radius: 8px;
+
+
+
+    padding: 32px;
+
+
+    
+    margin-bottom: 32px;
+}
+
+.idea img {
+    width: 60px;
+    height: 60px;
+
+    margin-right: 32px;
+}
+
+.idea h3 {
+    margin:  0;
+}
+
+.idea  p {
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description {
+    margin: 16px 0;
+}
+
+
+/* modal */
+
+#modal {
+    background: #ff5E84;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    transition: 400ms;
+    
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+#modal .content{
+    margin-top: 15%;
+
+    color: white;
+}
+
+#modal .content h1 {
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+.content form {
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto 15%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.content form div:nth-child(3), 
+.content form div:nth-child(4), 
+.content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+form input, form textarea {
+    width: 100%;
+
+    padding: 12px;
+    box-sizing: border-box;
+
+    border-radius: 6px;
+    border: 1px solid rgba(141, 25, 52, 0.5);
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a  {
+    
+    width: 150px;
+    height: 40px;
+    
+    background-color: #ffffff22;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    align-self: end;
+
+    transition: 400ms;
+}
+
+form a:hover {
+    background: #FFF;
+    color: #ff5E84;
+
+    text-decoration: none;
+}
+
+form button {
+    background: white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;
+    justify-self: end;
+
+    transition: 400ms;
+}
+
+form button:hover {
+    background-color: #0984e3;
+    color: white;
+
+    text-decoration: none;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* IDEIA.HTML */
+#page-ideias #container {
+    display: block;
+}
+
+#page-ideias header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav {
+    display: flex;
+}
+
+#page-ideias nav li {
+    list-style-type: none;
+
+    margin-right: 16px;
+}
+
+#page-ideias nav li a {
+    color: #25282B;
+}
+
+#page-ideias nav li a.button {
+    color: white;
+}
+
+#page-ideias nav li:last-child {
+    margin: 0; 
+} 
+
+
+
+section#title {
+    text-align: center;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+
+    font-size: 28px;
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+section#ideas .idea {
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+    margin-top: 64px 0;
+}
+
+
+    
+
